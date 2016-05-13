@@ -126,7 +126,7 @@ type ThunkClient internal (server : ActorRef<ServerMsg>, ?proc : Process) =
         let! awaiter = receiver.ReceiveEvent |> Async.AwaitEvent |> Async.StartChild
 
         let argument = VagabondConfig.Serializer.Pickle receiver.Ref |> System.Convert.ToBase64String
-        let proc = Process.Start(ThunkClient.Executable, argument)
+        let proc = Process.Start("/opt/X11/bin/xterm", sprintf " -e '/usr/local/bin/mono %s %s'" ThunkClient.Executable argument)
 
         let! serverRef = awaiter
         return new ThunkClient(serverRef, proc)
