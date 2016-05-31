@@ -7,6 +7,7 @@
 #I "../../bin/"
 
 #r "FsPickler.dll"
+#r "Thespian.dll"
 #r "ThunkServer.exe"
 
 open ThunkServer
