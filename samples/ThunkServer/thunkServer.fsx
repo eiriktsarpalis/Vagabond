@@ -1,6 +1,6 @@
 ﻿// BUG REPRODUCTION STEPS
 // Please run each of the provided steps in distinct interactions,
-// as opposed to evaluating the entire script
+// as opposed to evaluating the entire script at once.
 
 // Step 1: Init a "thunk server"
 
